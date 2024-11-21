@@ -1,0 +1,150 @@
+body,
+html {
+    padding: unset;
+    margin: unset;
+    background-color: #f5f5f5;
+}
+
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*HEADER*/
+header {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+.header__informations {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    border-top: 1px solid #cccc;
+    border-bottom: 1px solid #cccc;
+
+    font-size: large;
+}
+
+.header__title {
+    border-bottom: 1px solid #cccc;
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*SECTIONS*/
+main,
+#second-news {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #cccc;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column-reverse;
+    }
+
+    #second-news {
+        flex-direction: column;
+    }
+}
+
+/*SECTIONS TEXT*/
+.main__text,
+.second-news__text {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    padding: 1rem;
+}
+
+@media (max-width: 768px) {
+
+    .main__text,
+    .second-news__text {
+        max-width: 100%;
+    }
+}
+
+/*IMAGENS*/
+.main__img,
+.second-news__img {
+    width: 100%;
+    min-height: 300px;
+    max-height: 100%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.main__img {
+    background-image: url('./assets/news-img/mar.jpg');
+}
+
+.second-news__img {
+    background-image: url('./assets/news-img/ceu.jpg');
+}
+
+/*PEQUENAS NOTICIAS*/
+#short-news {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.short-news__news {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+
+    #short-news {
+        flex-direction: column;
+    }
+
+}
+
+/*REGUA HORIZONTAL*/
+hr {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    hr {
+        display: inline;
+        width: 50%;
+    }
+
+}
+
+/*RODAPÉ*/
+footer {
+    padding: 1rem;
+    background-color: #374856;
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #F7F7F7;
+}
+
+.footer__social-media img {
+    width: 32px;
+    max-width: 32px;
+    height: 32px;
+    max-height: 32px;
+    margin: 0 0.3rem;
+    cursor: pointer;
+}
